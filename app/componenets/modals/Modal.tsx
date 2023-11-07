@@ -3,7 +3,8 @@
 
 import {IoMdClose} from 'react-icons/io'
 import { useCallback, useEffect, useState } from 'react'
-import Button from './Button';
+import Button from '../Button';
+
 
 type Props = {
   isOpen: boolean;
@@ -12,7 +13,7 @@ type Props = {
   title?: string;
   body?:React.ReactElement
   footer?:React.ReactElement
-  actionLabel?: string;
+  actionLabel: string;
   disabled?:boolean
   secondaryAction?: () => void;
   secondarylable?:string
@@ -77,7 +78,11 @@ function Modal({isOpen,onClose,onSubmit,title,body,footer,actionLabel,disabled,s
 
                   <div className=' flex flex-col gap-2 p-6'>
                     <div className=' flex flex-row items-center gap-4 w-full'>
-                      <Button text='My Button' />
+                      {secondaryAction && secondarylable && (
+                         <Button outline disabled = {disabled} onClick={secondaryAction} text={secondarylable} />
+                      ) }
+                      
+                      <Button disabled = {disabled} onClick={handleSubmit} text={actionLabel} />
                     </div>
                   </div>
 

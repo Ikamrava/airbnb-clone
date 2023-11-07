@@ -4,7 +4,8 @@ import { Inter } from 'next/font/google'
 import './globals.css'
 import { Nunito } from 'next/font/google'
 import Navbar from './componenets/navbar/Navbar'
-import Modal from './componenets/Modal'
+import Modal from './componenets/modals/Modal'
+import RegisterModal from './componenets/modals/RegisterModal'
 
 
 
@@ -27,7 +28,8 @@ export default function RootLayout({
       
       <body className={nunito.className}>
         <Navbar/>
-        <Modal isOpen={true}   />
+        <RegisterModal/>
+        {/* <Modal isOpen={true} actionLabel='Submit' secondarylable='Cancel'   /> */}
         {children}
       </body>
     </html>

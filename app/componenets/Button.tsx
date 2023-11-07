@@ -3,7 +3,7 @@
 import { IconType } from 'react-icons';
 
 type Props = {
-   text: string;
+   text?: string;
    onClick: (e:React.MouseEvent<HTMLButtonElement>) => void;
    disabled?: boolean;
    outline?:boolean;
@@ -26,6 +26,7 @@ function Button({text,onClick,disabled,outline,small,icon:Icon}: Props) {
             <Icon size={24} className=' absolute left-4 top-2'  />
         )}
         {text}
+        
      </button>
   )
 }
