@@ -41,7 +41,9 @@ function RegisterModal({}: Props) {
   const bodyContent = (
     <div className=" flex flex-col gap-4">
        <Heading title="Welcome to Airbnb" subtitle="Create an account to continue"  />
-       <FormInput />
+       <FormInput id="email" label="Email" type="email" disable={isLoading} errors={errors} required register={register}/>
+       <FormInput id="name" label="Name" type="text" disable={isLoading} errors={errors} required register={register}/>
+       <FormInput id="password" label="Password" type="password" disable={isLoading} errors={errors} required register={register}/>
     </div>
   )
 
