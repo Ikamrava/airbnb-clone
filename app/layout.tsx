@@ -6,6 +6,7 @@ import { Nunito } from 'next/font/google'
 import Navbar from './componenets/navbar/Navbar'
 import Modal from './componenets/modals/Modal'
 import RegisterModal from './componenets/modals/RegisterModal'
+import ToasterProvider from './providers/ToasterProvider'
 
 
 
@@ -27,9 +28,9 @@ export default function RootLayout({
     <html lang="en">
       
       <body className={nunito.className}>
+        <ToasterProvider />
         <Navbar/>
         <RegisterModal/>
-        {/* <Modal isOpen={true} actionLabel='Submit' secondarylable='Cancel'   /> */}
         {children}
       </body>
     </html>

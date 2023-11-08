@@ -63,7 +63,7 @@ function Modal({isOpen,onClose,onSubmit,title,body,footer,actionLabel,disabled,s
             <div className={`translate duration-300 h-full ${showModel? "translate-y-0": "translate-y-full"} ${showModel? " opacity-100": " opacity-0"}`}>
               <div className='translate h-full lg:h-auto md:h-auto border-r-0 rounded-lg relative flex flex-col w-full bg-white outline-none focus:outline-none '>
                   
-                  <div className=' flex items-center p-6 rounded-t justify-center relative border-b-[1px]'>
+                  <div className=' flex items-center p-2 rounded-t justify-center relative border-b-[1px]'>
                     <button onClick={handleClose} className=' p-1 border-0 hover:opacity-70 transition absolute left-9'>
                       <IoMdClose size={18} />
                     </button>
@@ -72,7 +72,7 @@ function Modal({isOpen,onClose,onSubmit,title,body,footer,actionLabel,disabled,s
                     </div>
                   </div>
 
-                  <div className=' relative p-6 flex-auto'>
+                  <div className=' relative px-6 py-2  flex-auto'>
                       {body}
                   </div>
 
@@ -82,8 +82,9 @@ function Modal({isOpen,onClose,onSubmit,title,body,footer,actionLabel,disabled,s
                          <Button outline disabled = {disabled} onClick={secondaryAction} text={secondarylable} />
                       ) }
                       
-                      <Button disabled = {disabled} onClick={handleSubmit} text={actionLabel} />
+                      <Button disabled = {disabled} onClick={handleSubmit} text={actionLabel} small />
                     </div>
+                    {footer}
                   </div>
 
               </div>
