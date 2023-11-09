@@ -10,6 +10,7 @@ import ToasterProvider from './providers/ToasterProvider'
 
 
 
+
 export const metadata: Metadata = {
   title: 'Airbnb',
   description: 'Airbnb Clone',
@@ -31,6 +32,7 @@ export default function RootLayout({
         <ToasterProvider />
         <Navbar/>
         <RegisterModal/>
+        
         {children}
       </body>
     </html>
