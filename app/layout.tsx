@@ -7,6 +7,7 @@ import Navbar from './componenets/navbar/Navbar'
 import Modal from './componenets/modals/Modal'
 import RegisterModal from './componenets/modals/RegisterModal'
 import ToasterProvider from './providers/ToasterProvider'
+import LoginModal from './componenets/modals/LoginModal'
 
 
 
@@ -32,6 +33,7 @@ export default function RootLayout({
         <ToasterProvider />
         <Navbar/>
         <RegisterModal/>
+        <LoginModal/>
         
         {children}
       </body>
