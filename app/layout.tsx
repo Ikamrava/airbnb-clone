@@ -33,7 +33,7 @@ export default async function RootLayout({
 
     <html lang="en">
       
-      <body className={nunito.className}>
+      <body className={nunito.className} suppressHydrationWarning={true}>
         <ToasterProvider />
         <Navbar currentUser = {currentUser}/>
         <RegisterModal/>

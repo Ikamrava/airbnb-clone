@@ -72,8 +72,13 @@ function LoginModal({}: Props) {
   const footerContent = (
     <div className=" flex flex-col gap-4 mt-3">
         <hr />
-        <Button outline text="Register with Google" icon={FcGoogle} onClick={()=>{}} />
-        {/* <Button outline text="Register with GitHub" icon={AiFillGithub} onClick={()=>{}} /> */}
+        <Button outline text="Continue with Google" icon={FcGoogle} onClick={() => signIn('google')} />
+         <Button 
+          outline 
+          text="Continue with Github"
+          icon={AiFillGithub}
+          onClick={() => signIn('github')}
+      />
         <div className=" cursor-pointer text-center" onClick={loginModal.onClose}>
           <h3>Already have an account ?<span className=" text-blue-800 cursor-pointer"> Log In</span> </h3>
         </div>
