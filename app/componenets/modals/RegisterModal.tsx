@@ -123,9 +123,9 @@ const RegisterModal= () => {
           <span 
             onClick={onToggle} 
             className="
-              text-neutral-800
+              text-blue-800
               cursor-pointer 
-              hover:underline
+              hover:underline font-bold
             "
             > Log in</span>
         </p>

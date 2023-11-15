@@ -1,7 +1,7 @@
 "use client"
 
 import {signIn} from "next-auth/react"
-import { useState } from "react"
+import { useCallback, useState } from "react"
 import { AiFillGithub } from "react-icons/ai"
 import { FcGoogle } from "react-icons/fc"
 import { useForm ,SubmitHandler,FieldValues } from "react-hook-form"
@@ -61,6 +61,11 @@ function LoginModal({}: Props) {
     
   }
 
+  const toggle = useCallback(()=>{
+        loginModal.onClose()
+        RegisterModal.onOpen()
+  },[loginModal,RegisterModal])
+
   const bodyContent = (
     <div className=" flex flex-col gap-4">
        <Heading title="Welcome back" subtitle="Login to your account!"  />
@@ -79,8 +84,8 @@ function LoginModal({}: Props) {
           icon={AiFillGithub}
           onClick={() => signIn('github')}
       />
-        <div className=" cursor-pointer text-center" onClick={loginModal.onClose}>
-          <h3>Already have an account ?<span className=" text-blue-800 cursor-pointer"> Log In</span> </h3>
+        <div className=" cursor-pointer text-center" onClick={toggle}>
+          <h3>First time using Airbnb? <span className=" text-blue-800 cursor-pointer"> Create an account</span> </h3>
         </div>
 
     </div>
