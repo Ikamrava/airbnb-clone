@@ -79,7 +79,7 @@ function Modal({isOpen,onClose,onSubmit,title,body,footer,actionLabel,disabled,s
                   <div className=' flex flex-col gap-2 p-6'>
                     <div className=' flex flex-row items-center gap-4 w-full'>
                       {secondaryAction && secondarylable && (
-                         <Button outline disabled = {disabled} onClick={secondaryAction} text={secondarylable} />
+                         <Button outline disabled = {disabled} onClick={secondaryAction} text={secondarylable} small />
                       ) }
                       
                       <Button disabled = {disabled} onClick={handleSubmit} text={actionLabel} small />

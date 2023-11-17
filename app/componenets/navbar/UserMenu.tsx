@@ -21,14 +21,15 @@ export default function UserMenu({currentUser}: Props) {
   const loginModal = useLoginModal()
   const rentModal = useRentModal()
     const [isOpen,setIsOpen] = useState(false);
+
     const toggleOpen = useCallback(()=>{
         setIsOpen((value)=>!value);
     },[])
   
     const onRent = useCallback(()=>{
-      if(!currentUser){
-       return loginModal.onOpen()
-      }
+      // if(!currentUser){
+      //  return loginModal.onOpen()
+      // }
       rentModal.onOpen()
     },[currentUser,loginModal,rentModal])
 
